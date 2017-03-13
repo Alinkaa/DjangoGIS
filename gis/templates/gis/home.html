@@ -5,9 +5,8 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Home</h1>
-    <p>
-        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem est modi mollitia nam perspiciatis quaerat quidem quos recusandae sequi. Ad autem consequuntur facere harum praesentium provident reiciendis repellat totam voluptatum?</span><span>At blanditiis delectus dolore dolorum esse et impedit in ipsa modi molestias nesciunt officia quas, quidem, quisquam sapiente similique sit vel vitae. Dolore harum maiores suscipit. Commodi earum nisi soluta?</span><span>Asperiores aspernatur blanditiis delectus deleniti exercitationem fugiat harum illo in incidunt libero magni minus molestias mollitia, nihil nobis numquam officia officiis perferendis perspiciatis provident reiciendis rem sit totam veniam veritatis?</span><span>Adipisci alias dignissimos enim et ex impedit nesciunt sequi. Adipisci aspernatur autem commodi dicta dolore, ea earum eos excepturi exercitationem nam praesentium quam quia rem rerum similique veniam voluptas voluptates.</span><span>Ab atque distinctio eveniet hic maiores modi odio ratione reiciendis sunt vitae. Cumque doloremque est laboriosam nostrum, optio quo repellendus vel. Aliquam architecto aut omnis quaerat, quis ratione unde. Aliquam!</span><span>Consectetur distinctio doloremque, doloribus dolorum eius ex fuga hic id illum laboriosam, libero magnam nesciunt nostrum quibusdam reprehenderit ut veritatis. Animi aperiam autem dolore incidunt? Enim id magni praesentium voluptatibus?</span><span>At beatae debitis id illum iste praesentium quod sed ut veniam. Alias culpa ipsa ipsam magni neque officiis porro provident quae, quia quis quod sed similique soluta sunt velit, veniam.</span><span>A aliquam aliquid amet animi delectus deleniti dolore eaque et facilis, fugiat fugit id incidunt laborum laudantium mollitia nisi numquam obcaecati omnis pariatur placeat porro provident quidem sapiente velit, vitae.</span><span>Adipisci facilis fugit molestiae officia pariatur quis quisquam reiciendis, veritatis. Aliquid delectus ducimus eligendi error, esse fugit id nihil placeat suscipit tenetur! Commodi deleniti illum inventore nemo nihil quidem, reiciendis!</span><span>Accusantium alias aperiam aspernatur cum cumque, error fuga in iste nulla, odio possimus quae quas quo repudiandae tempora tempore unde voluptate voluptatum! Distinctio dolores nam necessitatibus perspiciatis quam quidem similique?
-    </span>
-    </p>
+    {% for article in articles %}
+        <h3>{{  article.title}}</h3>
+        <p>{{ article.text | safe }}</p>
+    {% endfor %}
 {% endblock %}
